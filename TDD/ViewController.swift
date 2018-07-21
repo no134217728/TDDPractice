@@ -25,14 +25,11 @@ class ViewController: UIViewController {
         }
     }
     
-    func calculateAllNumber(num: Int) -> Int {        
-        let a = num / 10
-        if a > 10 {
-            return calculateAllNumber(num: a)
+    func calculateAllNumber(num: Int) -> Int {
+        if num < 10 {
+            return num
         } else {
-            let b = num % 10
-            return a + b
+            return calculateAllNumber(num: num / 10) + calculateAllNumber(num: num % 10)
         }
     }
 }
-
