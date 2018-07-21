@@ -26,7 +26,14 @@ class ViewController: UIViewController {
     }
     
     func calculateAllNumber(num: Int) -> Int {
-        return 0
+        var result = 0
+        
+        let a = num / 10
+        let b = num % 10
+        
+        result = a + b
+        
+        return result
     }
 }
 
