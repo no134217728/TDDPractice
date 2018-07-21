@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TDD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W36-YW-zt7">
+                                <rect key="frame" x="44" y="267.5" width="287" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請輸入整數：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-EO-hXD">
+                                        <rect key="frame" x="91.5" y="10" width="104" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="UEp-Zs-2ay"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UsW-ld-7V9">
+                                        <rect key="frame" x="43.5" y="41" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SlV-sU-MrG"/>
+                                            <constraint firstAttribute="width" constant="200" id="so3-tv-dP6"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGV-3K-sat">
+                                        <rect key="frame" x="112.5" y="81" width="62" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5hB-Yi-Kw6"/>
+                                        </constraints>
+                                        <state key="normal" title="計算結果"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="數字相加後是：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="801-BQ-Qoe">
+                                        <rect key="frame" x="82.5" y="121" width="122" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="bQJ-U2-2PX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XGV-3K-sat" firstAttribute="centerX" secondItem="UsW-ld-7V9" secondAttribute="centerX" id="BfV-Op-eW9"/>
+                                    <constraint firstItem="UsW-ld-7V9" firstAttribute="top" secondItem="fr3-EO-hXD" secondAttribute="bottom" constant="10" id="Clu-f0-rgw"/>
+                                    <constraint firstItem="XGV-3K-sat" firstAttribute="bottom" secondItem="801-BQ-Qoe" secondAttribute="top" constant="-10" id="Scc-cr-efu"/>
+                                    <constraint firstAttribute="width" constant="287" id="YRy-VA-lij"/>
+                                    <constraint firstItem="801-BQ-Qoe" firstAttribute="centerX" secondItem="XGV-3K-sat" secondAttribute="centerX" id="f2k-Ub-e8p"/>
+                                    <constraint firstItem="XGV-3K-sat" firstAttribute="top" secondItem="UsW-ld-7V9" secondAttribute="bottom" constant="10" id="fxV-zc-sij"/>
+                                    <constraint firstItem="UsW-ld-7V9" firstAttribute="centerX" secondItem="fr3-EO-hXD" secondAttribute="centerX" id="pQS-5N-R7w"/>
+                                    <constraint firstItem="fr3-EO-hXD" firstAttribute="centerX" secondItem="W36-YW-zt7" secondAttribute="centerX" id="pZy-7A-oZY"/>
+                                    <constraint firstItem="fr3-EO-hXD" firstAttribute="top" secondItem="W36-YW-zt7" secondAttribute="top" constant="10" id="tuQ-N4-FLI"/>
+                                    <constraint firstAttribute="bottom" secondItem="801-BQ-Qoe" secondAttribute="bottom" constant="10" id="yS2-J6-UiN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.72156862749999995" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W36-YW-zt7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hh5-eh-U4o"/>
+                            <constraint firstItem="W36-YW-zt7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Rff-n3-L1e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
