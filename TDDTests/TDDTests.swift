@@ -10,6 +10,7 @@ import XCTest
 @testable import TDD
 
 class TDDTests: XCTestCase {
+    let vc = ViewController()
     
     override func setUp() {
         super.setUp()
@@ -22,19 +23,16 @@ class TDDTests: XCTestCase {
     }
     
     func testZero() {
-        let vc = ViewController()
         let result = vc.calculateAllNumber(num: 0)
         XCTAssert(result == 0)
     }
     
     func test45() {
-        let vc = ViewController()
         let result = vc.calculateAllNumber(num: 45)
         XCTAssert(result == 9)
     }
     
     func test123() {
-        let vc = ViewController()
         let result = vc.calculateAllNumber(num: 123)
         XCTAssert(result == 6)
     }
