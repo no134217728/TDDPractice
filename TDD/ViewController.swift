@@ -26,10 +26,12 @@ class ViewController: UIViewController {
     }
     
     func calculateAllNumber(num: Int) -> Int {
-        if num < 10 {
-            return num
+        let number = num < 0 ? num * -1 : num
+        
+        if number < 10 {
+            return number
         } else {
-            return calculateAllNumber(num: num / 10) + calculateAllNumber(num: num % 10)
+            return calculateAllNumber(num: number / 10) + calculateAllNumber(num: number % 10)
         }
     }
 }
