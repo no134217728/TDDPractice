@@ -27,9 +27,19 @@ class TDDTests: XCTestCase {
         XCTAssert(result == 0)
     }
     
+    func test8() {
+        let result = vc.calculateAllNumber(num: 8)
+        XCTAssert(result == 8)
+    }
+    
     func test45() {
         let result = vc.calculateAllNumber(num: 45)
         XCTAssert(result == 9)
+    }
+    
+    func test67() {
+        let result = vc.calculateAllNumber(num: 67)
+        XCTAssert(result == 13)
     }
     
     func test123() {
