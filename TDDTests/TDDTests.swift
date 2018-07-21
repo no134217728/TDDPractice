@@ -52,6 +52,11 @@ class TDDTests: XCTestCase {
         XCTAssert(result == 26)
     }
     
+    func testMinus82() {
+        let result = vc.calculateAllNumber(num: -82)
+        XCTAssert(result == 10)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
