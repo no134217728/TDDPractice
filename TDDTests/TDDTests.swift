@@ -27,6 +27,12 @@ class TDDTests: XCTestCase {
         XCTAssert(result == 0)
     }
     
+    func test45() {
+        let vc = ViewController()
+        let result = vc.calculateAllNumber(num: 45)
+        XCTAssert(result == 9)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
